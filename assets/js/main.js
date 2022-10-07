@@ -54,10 +54,10 @@ btn1.addEventListener('click', function(){
     //console.log(randomSeat);
     document.querySelector(".seat_number").innerHTML = randomSeat;
     
-    const randomCode = Math.floor((Math.random() * 10000) + 1);
+    const randomCode = Math.floor((Math.random() * 100) + 1);
     document.querySelector(".ticket_code").innerHTML = randomCode;
     
-    document.querySelector(".price").innerHTML = ticketPrice;
+    document.querySelector(".price").innerHTML = "€" + ticketPrice;
 
 
 
