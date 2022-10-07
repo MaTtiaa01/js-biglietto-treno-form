@@ -12,15 +12,19 @@ let btn2 = document.querySelector("btn_stop");
 
 btn1.addEventListener('click', function(){
 
-    const userName = document.getElementById("full_name").value;
+    const userName = document.getElementById("full_name");
+    //document.querySelector(".passenger_name").innerHTML = userName;
     // console.log(userName);
+
     // Il numero di chilometri da percorrere
 
     const km = document.getElementById("km").value;
+    
     //console.log(km);
     // Età del passeggero 
 
     const age = document.getElementById("age").value;
+    
     //console.log(age);
         //Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio
     // il prezzo del biglietto è definito in base ai km (0.21 € al km)
@@ -35,16 +39,28 @@ btn1.addEventListener('click', function(){
 
     if (age < 18){
         ticketPrice = ( standardPrice * youngDiscount).toFixed(2);
+        document.querySelector(".offerta").innerHTML = "biglietto ridotto"
     } else if (age > 65){
         ticketPrice = (standardPrice * oldDiscount).toFixed(2);
+        document.querySelector(".offerta").innerHTML = "biglietto ridotto"
     } else {
         ticketPrice = (standardPrice).toFixed(2);
+        document.querySelector(".offerta").innerHTML = "biglietto intero"
     }
 
     //console.log(ticketPrice, age);
-    document.querySelector("p").innerHTML = ticketPrice;
+   
+    const randomSeat =  Math.floor((Math.random() * 100) + 1);;
+    console.log(randomSeat);
+    document.querySelector(".seat_number").innerHTML = randomSeat;
+    
+    
+    
+    document.querySelector(".price").innerHTML = ticketPrice;
+
+
+
+
+
 })
 
-// btn2.addEventListener("click" , function(){
-//    //reload page
-// })
