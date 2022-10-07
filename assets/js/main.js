@@ -34,11 +34,11 @@ btn1.addEventListener('click', function(){
     let ticketPrice;
 
     if (age < 18){
-        ticketPrice = standardPrice * youngDiscount
+        ticketPrice = ( standardPrice * youngDiscount).toFixed(2);
     } else if (age > 65){
-        ticketPrice = standardPrice * oldDiscount
+        ticketPrice = (standardPrice * oldDiscount).toFixed(2);
     } else {
-        ticketPrice = standardPrice
+        ticketPrice = (standardPrice).toFixed(2);
     }
 
     //console.log(ticketPrice, age);
