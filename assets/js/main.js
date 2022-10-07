@@ -12,8 +12,9 @@ let btn2 = document.querySelector("btn_stop");
 
 btn1.addEventListener('click', function(){
 
-    const userName = document.getElementById("full_name");
-    //document.querySelector(".passenger_name").innerHTML = userName;
+    const userName = document.getElementById("name").value;
+    document.querySelector(".passenger_name").innerHTML = userName;
+   
     // console.log(userName);
 
     // Il numero di chilometri da percorrere
