@@ -1,13 +1,13 @@
 // Scrivere un programma che chieda all’utente:
-const name = prompt("Come ti chiami?");
 
+const userName = document.getElementById("full_name");
 
 // Il numero di chilometri da percorrere
 
-const km = Number(prompt("Quanti km vuoi percorrere?"));
+const km = document.getElementById("km");
 
 // Età del passeggero 
-const age = Number(prompt("Quanti anni hai?"));
+const age = document.getElementById("age");
 
 //Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
@@ -28,4 +28,11 @@ if (age < 18){
     ticketPrice = standardPrice
 }
 
-console.log(ticketPrice);
+//console.log(ticketPrice);
+
+let btn1 = document.querySelector(".btn_start");
+let finalPrice  
+
+btn1.addEventListener('click', function(){
+    document.querySelector("p").innerHTML = ticketPrice
+})
