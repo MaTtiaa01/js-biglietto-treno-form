@@ -12,16 +12,16 @@ let btn2 = document.querySelector("btn_stop");
 
 btn1.addEventListener('click', function(){
 
-    const userName = document.getElementById("full_name");
-     
+    const userName = document.getElementById("full_name").value;
+    // console.log(userName);
     // Il numero di chilometri da percorrere
 
     const km = document.getElementById("km").value;
-    
+    //console.log(km);
     // Età del passeggero 
 
     const age = document.getElementById("age").value;
-
+    //console.log(age);
         //Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio
     // il prezzo del biglietto è definito in base ai km (0.21 € al km)
     const standardPrice = km * 0.21;
